@@ -46,6 +46,11 @@ nav {
     width: 48px;
 }
 
+#nav-logo:hover {
+    opacity: 0.5;
+    transition: 0.15s ease-in-out;
+}
+
 #nav-links a {
     display: inline-block;
     padding: 0 18px;
@@ -67,4 +72,10 @@ nav {
     font-size: 20px;
     font-weight: 700;
     color: var(--color-white-light);
+}
+
+#nav-logo:hover, #nav-links a:hover, #nav-log-in:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.15s ease-in-out;
 }
