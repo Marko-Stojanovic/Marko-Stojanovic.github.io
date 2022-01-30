@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700;900&display=swap');
+
 :root {
+    --color-logo: rgb(227, 25, 54); /* #E31936 */
+
     --color-red-light: rgb(231, 77, 60); /* #E74D3C */
     --color-red-dark: rgb(192, 57, 43); /* #C0392B */
     --color-orange-light: rgb(230, 125, 34); /* #E67D22 */
@@ -24,15 +28,41 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Urbanist', sans-serif;
 }
 
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 64px;
+    padding: 0 32px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), 1px 1px 16px rgba(0, 0, 0, 0.1);
 }
 
 #nav-logo {
-    padding: 16px;
+    display: inline-block;
     height: 32px;
     width: 32px;
+}
+
+#nav-links a {
+    display: inline-block;
+    padding: 0 12px;
+    height: 64px;
+    line-height: 64px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--color-black-dark);
+}
+
+#nav-log-in {
+    display: inline-block;
+    padding: 6px 12px;
+    background: var(--color-logo);
+    border: 0;
+    border-radius: 4px;
+    font-weight: 700;
+    color: var(--color-white-light);
 }
