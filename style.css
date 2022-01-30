@@ -100,5 +100,5 @@ nav {
     color: var(--color-white-light);
     text-align: center;
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), 1px 1px 16px rgba(0, 0, 0, 0.1);
-    opacity: 0.9;
+    opacity: 0.95;
 }
