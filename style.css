@@ -79,3 +79,26 @@ nav {
     cursor: pointer;
     transition: opacity 0.15s ease-in-out;
 }
+
+#header-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 512px;
+    background: url(images/header.png) 50% 50% / cover no-repeat;
+}
+
+#header-logo {
+    height: 200px;
+}
+
+#header-image p {
+    margin: 24px 0 0 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-white-light);
+    text-align: center;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), 1px 1px 16px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+}
