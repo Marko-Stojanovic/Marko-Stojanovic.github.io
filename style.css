@@ -31,13 +31,25 @@
     font-family: 'Urbanist', sans-serif;
 }
 
+#width-limit {
+    margin: 0 auto;
+    padding: 96px 128px;
+    max-width: 960px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 96px;
+    position: fixed;
     padding: 0 48px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 96px;
+    background: white;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), 1px 1px 16px rgba(0, 0, 0, 0.1);
+    z-index: 999;
 }
 
 #nav-logo {
@@ -80,6 +92,10 @@ nav {
     transition: opacity 0.15s ease-in-out;
 }
 
+header {
+    margin: 96px 0 0 0;
+}
+
 #header-image {
     display: flex;
     flex-direction: column;
@@ -101,4 +117,60 @@ nav {
     text-align: center;
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), 1px 1px 16px rgba(0, 0, 0, 0.1);
     opacity: 0.95;
+}
+
+section:nth-child(2n) {
+    background: var(--color-white-light);
+}
+
+section h1 {
+    margin: 0 0 12px 0;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--color-logo);
+}
+
+section p {
+    font-size: 24px;
+    color: var(--color-black-dark);
+}
+
+footer {
+    background: var(--color-logo);
+    box-shadow: 0 50vh 0 50vh var(--color-logo);
+    text-transform: uppercase;
+}
+
+#footer-cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+#footer-col {
+    flex: 1;
+    min-width: 256px;
+}
+
+#footer-col p, #footer-col a {
+    display: block;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-white-light);
+}
+
+#footer-col a:hover {
+    opacity: 0.5;
+    transition: 0.15s ease-in-out;
+}
+
+#footer-col img {
+    display: block;
+    margin: 0 auto;
+    width: 196px;
 }
