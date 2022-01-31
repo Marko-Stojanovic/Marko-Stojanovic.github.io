@@ -106,7 +106,8 @@ header {
 }
 
 #header-logo {
-    height: 200px;
+    max-width: 586px;
+    width: 75%;
 }
 
 #header-image p {
