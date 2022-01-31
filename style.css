@@ -113,13 +113,14 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 32px;
     height: 512px;
     background: url(images/header.png) 50% 50% / cover no-repeat;
 }
 
 #header-logo {
     max-width: 586px;
-    width: 75%;
+    width: 95%;
 }
 
 #header-image p {
