@@ -137,6 +137,7 @@ header {
     padding: 32px;
     height: 512px;
     background: url(images/header.png) 50% 50% / cover no-repeat;
+    background-color: var(--color-logo);
 }
 
 #header-logo {
