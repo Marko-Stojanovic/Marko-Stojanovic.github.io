@@ -98,7 +98,26 @@ nav {
     border: 0;
 }
 
-#nav-logo:hover, #nav-links a:hover, #nav-log-in:hover, #nav-dropdown:hover {
+#nav-dropdown-links {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 48px;
+    background: white;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), 1px 1px 16px rgba(0, 0, 0, 0.1);
+}
+
+#nav-dropdown-links a {
+    display: block;
+    padding: 8px 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-black-dark);
+}
+
+#nav-logo:hover, #nav-links a:hover, #nav-log-in:hover, #nav-dropdown:hover, #nav-dropdown-links a:hover {
     opacity: 0.5;
     cursor: pointer;
     transition: opacity 0.15s ease-in-out;
