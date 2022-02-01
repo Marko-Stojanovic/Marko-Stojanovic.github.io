@@ -6,12 +6,12 @@ $(document).ready(function() {
 
 // Toggle dropdown when clicking dropdown button
 function toggleDropdown() {
-    $("#nav-dropdown-links").toggle();
+    $("#nav-dropdown-links").toggle(150);
 };
 
 // Hide dropdown when clicking outside dropdown menu
 $(document).click((event) => {
     if (!$(event.target).closest('#nav-dropdown').length) {
-        $("#nav-dropdown-links").hide();
+        $("#nav-dropdown-links").hide(150);
     }
 });
