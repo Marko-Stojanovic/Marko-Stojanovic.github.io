@@ -1,9 +1,13 @@
-// Toggle dropdown when clicking dropdown button
-$(document).ready(function(){
-    $("#nav-dropdown").click(function(){
-        $("#nav-dropdown-links").toggle();
-    });
+$(document).ready(function() {
+    // Load nav and footer into each page
+    $('nav').load('/components/nav.html');
+    $('footer').load('/components/footer.html');
 });
+
+// Toggle dropdown when clicking dropdown button
+function toggleDropdown() {
+    $("#nav-dropdown-links").toggle();
+};
 
 // Hide dropdown when clicking outside dropdown menu
 $(document).click((event) => {
