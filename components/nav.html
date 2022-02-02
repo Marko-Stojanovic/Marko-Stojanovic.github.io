@@ -11,9 +11,21 @@
     </div>
 </div>
 <div id="nav-right">
-    <button id="nav-log-in">Log In</button>
+    <button id="nav-log-in" onclick="showModal()">Log In</button>
     <button id="nav-dropdown" onclick="toggleDropdown()"></button>
 </div>
+<div id="nav-log-in-modal">
+    <h2>Staff Log In</h2>
+    <label for="name">Username</label>
+    <input type="text" id="name" name="name">
+    <label for="pass">Password</label>
+    <input type="password" id="pass" name="pass">
+    <div id="nav-modal-buttons">
+        <button id="nav-cancel" onclick="hideModal()">Cancel</button>
+        <button id="nav-log-in">Log In</button>
+    </div>
+</div>
+<div id="nav-log-in-modal-tint" onclick="hideModal()"></div>
 <div id="nav-dropdown-links">
     <a href="/">Home</a>
     <a href="/faqs.html">FAQs</a>

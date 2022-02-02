@@ -4,6 +4,17 @@ $(document).ready(function() {
     $('footer').load('/components/footer.html');
 });
 
+// Show modal when clicking log in button
+function showModal() {
+    $("#nav-log-in-modal").show(150);
+    $("#nav-log-in-modal-tint").show();
+};
+
+function hideModal() {
+    $("#nav-log-in-modal").hide(150);
+    $("#nav-log-in-modal-tint").hide();
+};
+
 // Toggle dropdown when clicking dropdown button
 function toggleDropdown() {
     $("#nav-dropdown-links").toggle(150);
