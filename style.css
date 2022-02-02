@@ -177,6 +177,7 @@ nav {
 #nav-dropdown-links {
     display: none;
     position: fixed;
+    padding: 4px;
     top: 80px;
     right: 48px;
     background: white;
