@@ -99,6 +99,7 @@ nav {
     max-width: 400px;
     transform: translate(-50%, -50%);
     background: white;
+    border-radius: 6px;
     box-shadow: var(--shadow);
     z-index: 1001;
     box-sizing: border-box;
@@ -181,6 +182,7 @@ nav {
     top: 80px;
     right: 48px;
     background: white;
+    border-radius: 6px;
     box-shadow: var(--shadow);
 }
 
