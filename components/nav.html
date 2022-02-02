@@ -12,20 +12,22 @@
 </div>
 <div id="nav-right">
     <button id="nav-log-in" onclick="showModal()">Log In</button>
+    <button id="nav-sign-out" onclick="signOut()">Sign Out</button>
     <button id="nav-dropdown" onclick="toggleDropdown()"></button>
 </div>
-<div id="nav-log-in-modal">
+<div id="nav-modal">
     <h2>Staff Log In</h2>
+    <h3>Incorrect username or password</h3>
     <label for="name">Username</label>
     <input type="text" id="name" name="name">
     <label for="pass">Password</label>
     <input type="password" id="pass" name="pass">
-    <div id="nav-modal-buttons">
-        <button id="nav-cancel" onclick="hideModal()">Cancel</button>
-        <button id="nav-log-in">Log In</button>
+    <div id="modal-buttons">
+        <button id="modal-cancel" onclick="hideModal()">Cancel</button>
+        <button id="modal-log-in" onclick="logIn()">Log In</button>
     </div>
 </div>
-<div id="nav-log-in-modal-tint" onclick="hideModal()"></div>
+<div id="nav-modal-tint" onclick="hideModal()"></div>
 <div id="nav-dropdown-links">
     <a href="/">Home</a>
     <a href="/faqs.html">FAQs</a>
