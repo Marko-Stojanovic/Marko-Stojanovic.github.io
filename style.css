@@ -94,7 +94,7 @@ nav {
     color: var(--color-black-dark);
 }
 
-#nav-log-in, #nav-sign-out, #modal-log-in, #modal-cancel {
+#nav-log-in, #nav-sign-out, #modal-log-in, #modal-cancel, #add {
     display: inline-block;
     vertical-align: middle;
     padding: 8px 16px;
@@ -371,6 +371,54 @@ footer {
 /* ======================================================================= */
 /* ============================== INQUIRIES ============================== */
 /* ======================================================================= */
+
+#add {
+    margin: 0 0 16px 0;
+    padding: 8px 16px 6px 40px;
+    background-image: url(/images/add.png);
+    background-size: 24px 24px;
+    background-position: 10px 8px;
+    background-repeat: no-repeat;
+}
+
+#comment {
+    position: relative;
+    padding: 16px 24px 16px 112px;
+    min-height: 96px;
+    background: var(--color-white-light);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#comment:not(:last-child) { 
+    margin: 0 0 16px 0;
+}
+
+#comment #profile {
+    position: absolute;
+    left: 24px;
+    height: 64px;
+    width: 64px;
+}
+
+#comment #name {
+    font-size: 20px;
+    font-weight: 700;
+    vertical-align: middle;
+    color: var(--color-black-light);
+}
+
+#comment #time {
+    float: right;
+    color: var(--color-gray-dark);
+}
+
+#comment #text {
+    display: block;
+    margin: 8px 0 0 0;
+    font-size: 18px;
+    color: var(--color-black-dark);
+}
 
 /* ======================================================================= */
 /* =============================== MOBILE ================================ */
