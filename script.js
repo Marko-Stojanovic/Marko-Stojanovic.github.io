@@ -4,10 +4,21 @@ $(document).ready(function() {
         if (sessionStorage.getItem("logInStatus") == "true") {
             $("#nav-log-in").hide();
             $("#nav-sign-out").show();
-            console.log("blue");
         }
     });
     $('footer').load('/components/footer.html');
+
+    $(".accordion-button").click(function() {
+        $(this).prev().toggleClass("rotate");
+        $(this).next().slideToggle(150);
+    });
+});
+
+// Hide dropdown when clicking outside dropdown menu
+$(document).click((event) => {
+    if (!$(event.target).closest('#nav-dropdown').length) {
+        $("#nav-dropdown-links").slideUp(150);
+    }
 });
 
 // Show modal when clicking log in button
@@ -26,7 +37,7 @@ function hideModal() {
 
 // Toggle dropdown when clicking dropdown button
 function toggleDropdown() {
-    $("#nav-dropdown-links").toggle(150);
+    $("#nav-dropdown-links").slideToggle(150);
 };
 
 function logIn() {
@@ -44,10 +55,3 @@ function signOut() {
     sessionStorage.setItem("logInStatus", "false");
     location.reload();
 };
-
-// Hide dropdown when clicking outside dropdown menu
-$(document).click((event) => {
-    if (!$(event.target).closest('#nav-dropdown').length) {
-        $("#nav-dropdown-links").hide(150);
-    }
-});

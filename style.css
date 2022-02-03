@@ -27,6 +27,10 @@
     --shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), 1px 1px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* ======================================================================= */
+/* ============================== UNIVERSAL ============================== */
+/* ======================================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -38,6 +42,19 @@
     padding: 96px 32px;
     max-width: 960px;
 }
+
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--color-white-light);
+    text-shadow: var(--shadow);
+}
+
+/* ======================================================================= */
+/* ================================ HOME ================================= */
+/* ======================================================================= */
 
 nav {
     display: flex;
@@ -223,7 +240,7 @@ header {
     margin: 96px 0 0 0;
 }
 
-#header-image {
+#header-image, #header-image-small {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -232,6 +249,10 @@ header {
     height: 512px;
     background: url(images/header.png) 50% 50% / cover no-repeat;
     background-color: var(--color-logo);
+}
+
+#header-image-small {
+    height: 128px
 }
 
 #header-logo {
@@ -254,12 +275,10 @@ section:nth-child(2n) {
 }
 
 section h1 {
-    margin: 0 0 12px 0;
     font-size: 42px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-align: center;
+    margin: 0 0 12px 0;
     color: var(--color-logo);
+    text-shadow: none;
 }
 
 section p {
@@ -304,6 +323,58 @@ footer {
     margin: 0 auto;
     width: 196px;
 }
+
+/* ======================================================================= */
+/* ================================ FAQs ================================= */
+/* ======================================================================= */
+
+#accordion {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#accordion:not(:last-child) { 
+    margin: 0 0 16px 0;
+}
+
+.accordion-button {
+    padding: 16px 77px 16px 24px;
+    background: var(--color-black-dark);
+    font-size: 24px;
+    color: var(--color-white-light);
+    cursor: pointer;
+}
+
+#accordion-content {
+    display: none;
+    padding: 16px 24px;
+    background: var(--color-white-light);
+    font-size: 20px;
+    color: var(--color-black-dark);
+}
+
+#accordion img {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    height: 29px;
+    width: 29px;
+    transition: 0.15s ease-in-out;
+    pointer-events: none;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+/* ======================================================================= */
+/* ============================== INQUIRIES ============================== */
+/* ======================================================================= */
+
+/* ======================================================================= */
+/* =============================== MOBILE ================================ */
+/* ======================================================================= */
 
 @media all and (min-width:0px) and (max-width: 640px) {
     
