@@ -435,4 +435,17 @@ footer {
         display: inline-block;
     }
 
+    #comment {
+        padding: 16px 24px;
+    }
+
+    #comment #profile {
+        height: 28px;
+        width: 28px;
+    }
+
+    #comment #name {
+        margin: 0 0 0 36px;
+    }
+
   }
