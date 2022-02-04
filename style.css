@@ -451,7 +451,7 @@ footer {
     }
 
     #comment {
-        padding: 16px 24px;
+        padding: 16px 24px 16px 92px;
     }
 
     #comment #profile {
@@ -459,14 +459,14 @@ footer {
         width: 52px;
     }
 
-    #comment #name {
-        margin: 0 0 0 68px;
-    }
-
     #comment #time {
-        margin: 4px 0 8px 68px;
+        margin: 4px 0 8px 0;
         width: 100%;
         float: left;
+    }
+
+    #comment #text {
+        margin: 0 0 0 -68px;
     }
 
   }
