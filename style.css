@@ -383,7 +383,7 @@ footer {
 
 #comment {
     position: relative;
-    padding: 16px 24px 16px 112px;
+    padding: 16px 24px 16px 110px;
     min-height: 96px;
     background: var(--color-white-light);
     border-radius: 6px;
@@ -440,12 +440,18 @@ footer {
     }
 
     #comment #profile {
-        height: 28px;
-        width: 28px;
+        height: 52px;
+        width: 52px;
     }
 
     #comment #name {
-        margin: 0 0 0 36px;
+        margin: 0 0 0 68px;
+    }
+
+    #comment #time {
+        margin: 4px 0 8px 68px;
+        width: 100%;
+        float: left;
     }
 
   }
