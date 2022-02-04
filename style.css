@@ -394,6 +394,21 @@ footer {
     margin: 0 0 16px 0;
 }
 
+#comment.reply {
+    margin-left: 48px;
+}
+
+#comment.reply:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    bottom: 0;
+    width: 12px;
+    background: var(--color-white-dark);
+    border-radius: 6px;
+}
+
 #comment #profile {
     position: absolute;
     left: 24px;
