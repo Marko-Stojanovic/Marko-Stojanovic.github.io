@@ -343,6 +343,7 @@ footer {
     background: var(--color-black-dark);
     font-size: 24px;
     color: var(--color-white-light);
+    user-select: none;
     cursor: pointer;
 }
 
