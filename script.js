@@ -1,3 +1,4 @@
+// Admin usernames
 const names = ["marko-stojanovic", 
                "maddy-meier", 
                "karen-mosquera",
@@ -7,6 +8,7 @@ $(document).ready(function() {
     // Load nav and footer into each page
     $('nav').load('/components/nav.html', function() {
         if (sessionStorage.getItem("logInStatus") == "true") {
+            // Show admin features
             $("#nav-log-in").hide();
             $("#nav-sign-out").show();
             $(".delete").show();
@@ -14,6 +16,7 @@ $(document).ready(function() {
     });
     $('footer').load('/components/footer.html');
 
+    // Toggle accordion
     $(".accordion-button").click(function() {
         $(this).prev().toggleClass("rotate");
         $(this).next().slideToggle(150);
@@ -33,6 +36,7 @@ function showModal() {
     $("#nav-modal-tint").show();
 };
 
+// Hide modal when clicking on cancel button
 function hideModal() {
     $("#nav-modal").hide(150);
     $("#nav-modal-tint").hide();
@@ -46,6 +50,7 @@ function toggleDropdown() {
     $("#nav-dropdown-links").slideToggle(150);
 };
 
+// Check username and password when clicking log in button
 function logIn() {
     var name = $("#nav-modal #name").val();
     var pass = $("#nav-modal #pass").val()
@@ -59,6 +64,7 @@ function logIn() {
     }
 };
 
+// Reload page when clicking sign out button
 function signOut() {
     sessionStorage.setItem("logInStatus", "false");
     location.reload();

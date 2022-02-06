@@ -476,6 +476,7 @@ footer {
     margin: 16px 8px 0 0;
     height: 32px;
     width: 32px;
+    cursor: pointer;
 }
 
 #comment .delete {
