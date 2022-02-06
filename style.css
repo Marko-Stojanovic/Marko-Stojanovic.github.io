@@ -377,6 +377,7 @@ footer {
     width: 29px;
     transition: 0.15s ease-in-out;
     pointer-events: none;
+    user-select: none;
 }
 
 .rotate {
