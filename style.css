@@ -354,6 +354,20 @@ footer {
     color: var(--color-black-dark);
 }
 
+#accordion-content span {
+    display: block;
+}
+
+#accordion-content span:first-child {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--color-black-light);
+}
+
+#accordion-content span:not(:last-child) {
+    margin: 0 0 8px 0;
+}
+
 #accordion img {
     position: absolute;
     top: 16px;
