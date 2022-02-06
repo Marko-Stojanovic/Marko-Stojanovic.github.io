@@ -418,8 +418,9 @@ footer {
 }
 
 #comment.admin #profile {
+    height: 60px;
+    width: 60px;
     border: 4px solid var(--color-logo);
-    transform: translate(-2px, -2px);
 }
 
 #comment #name {
