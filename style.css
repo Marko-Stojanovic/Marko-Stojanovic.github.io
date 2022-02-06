@@ -77,7 +77,7 @@ nav {
     width: 48px;
 }
 
-#nav-logo:hover {
+#nav-logo:hover, #comment .reply:hover, #comment .delete:hover {
     opacity: 0.5;
     transition: 0.1s ease-in-out;
 }
@@ -472,6 +472,16 @@ footer {
     color: var(--color-black-dark);
 }
 
+#comment .reply, #comment .delete {
+    margin: 16px 8px 0 0;
+    height: 32px;
+    width: 32px;
+}
+
+#comment .delete {
+    display: none;
+}
+
 /* ======================================================================= */
 /* =============================== MOBILE ================================ */
 /* ======================================================================= */
@@ -508,6 +518,10 @@ footer {
 
     #comment #text {
         margin: 0 0 0 -68px;
+    }
+
+    #comment .reply, #comment .delete {
+        transform: translate(-68px, 0);
     }
 
   }

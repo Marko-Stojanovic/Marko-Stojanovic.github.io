@@ -1,9 +1,15 @@
+const names = ["marko-stojanovic", 
+               "maddy-meier", 
+               "karen-mosquera",
+               "nahid-akter"];
+
 $(document).ready(function() {
     // Load nav and footer into each page
     $('nav').load('/components/nav.html', function() {
         if (sessionStorage.getItem("logInStatus") == "true") {
             $("#nav-log-in").hide();
             $("#nav-sign-out").show();
+            $(".delete").show();
         }
     });
     $('footer').load('/components/footer.html');
@@ -41,8 +47,10 @@ function toggleDropdown() {
 };
 
 function logIn() {
-    if ($("#nav-modal #name").val() == "marko-stojanovic" &&
-        $("#nav-modal #pass").val() == "supdup134") {
+    var name = $("#nav-modal #name").val();
+    var pass = $("#nav-modal #pass").val()
+    if (jQuery.inArray(name, names) !== -1 &&
+        pass == "nyhfb") {
             sessionStorage.setItem("logInStatus", "true");
             location.reload();
     }
