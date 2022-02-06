@@ -478,6 +478,11 @@ footer {
         width: 52px;
     }
 
+    #comment.admin #profile {
+        height: 48px;
+        width: 48px;
+    }
+
     #comment #time {
         margin: 4px 0 8px 0;
         width: 100%;
