@@ -1,3 +1,9 @@
+// Current page ()
+const page = top.location.pathname;
+
+// Admin log in status (true, false)
+const admin = sessionStorage.getItem("logInStatus");
+
 // Admin usernames
 const names = ["marko-stojanovic", 
                "maddy-meier", 
@@ -7,17 +13,16 @@ const names = ["marko-stojanovic",
 $(document).ready(function() {
     // Load nav and footer into each page
     $('nav').load('/components/nav.html', function() {
-        if (sessionStorage.getItem("logInStatus") == "true") {
+        if (admin == "true") {
             // Show admin features
             $("#nav-log-in").hide();
             $("#nav-sign-out").show();
-            $(".delete").show();
         }
     });
     $('footer').load('/components/footer.html');
 
     // Load comments
-    if (document.location.href.match(/[^\/]+$/)[0] == "inquiries.html") {
+    if (page.indexOf("inquiries") >= 0) {
         $.getJSON("/data/inquiries.json", function(json) {
             json.comments.forEach(function (comment, i) {
                 $.get("/components/comment.html", function(data) {
@@ -28,6 +33,8 @@ $(document).ready(function() {
                     $data.find("#time").text(comment.time);
                     $data.find("#text").text(comment.text);
                     $("#width-limit").append($data);
+
+                    if (admin == "true") $(".delete").show();
                 });
             });
         });
