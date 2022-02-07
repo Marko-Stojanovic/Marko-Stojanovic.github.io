@@ -16,6 +16,23 @@ $(document).ready(function() {
     });
     $('footer').load('/components/footer.html');
 
+    // Load comments
+    if (document.location.href.match(/[^\/]+$/)[0] == "inquiries.html") {
+        $.getJSON("/data/inquiries.json", function(json) {
+            json.comments.forEach(function (comment, i) {
+                $.get("/components/comment.html", function(data) {
+                    var $data = $(data);
+                    if (comment.reply == "true") $data.addClass("reply");
+                    if (comment.admin == "true") $data.addClass("admin");
+                    $data.find("#name").text(comment.name);
+                    $data.find("#time").text(comment.time);
+                    $data.find("#text").text(comment.text);
+                    $("#width-limit").append($data);
+                });
+            });
+        });
+    }
+
     // Toggle accordion
     $(".accordion-button").click(function() {
         $(this).prev().toggleClass("rotate");
