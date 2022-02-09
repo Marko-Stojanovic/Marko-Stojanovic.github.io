@@ -17,6 +17,7 @@ $(document).ready(function() {
             // Show admin features
             $("#nav-log-in").hide();
             $("#nav-sign-out").show();
+            $(".delete").show();
         }
     });
     $('footer').load('/components/footer.html');
