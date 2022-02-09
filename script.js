@@ -22,9 +22,10 @@ $(document).ready(function() {
     $('footer').load('/components/footer.html');
 
     // Load comments
-    if (page.indexOf("inquiries") >= 0) {
+    /*if (page.indexOf("inquiries") >= 0) {
         $.getJSON("/data/inquiries.json", function(json) {
             json.comments.forEach(function (comment, i) {
+                console.log(i);
                 $.get("/components/comment.html", function(data) {
                     var $data = $(data);
                     if (comment.reply == "true") $data.addClass("reply");
@@ -38,7 +39,7 @@ $(document).ready(function() {
                 });
             });
         });
-    }
+    }*/
 
     // Toggle accordion
     $(".accordion-button").click(function() {
