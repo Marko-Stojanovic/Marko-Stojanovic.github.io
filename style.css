@@ -349,7 +349,7 @@ footer {
 
 #accordion-content {
     display: none;
-    padding: 16px 24px;
+    padding: 24px 32px;
     background: var(--color-white-light);
     font-size: 20px;
     color: var(--color-black-dark);
@@ -366,7 +366,7 @@ footer {
 }
 
 #accordion-content span:not(:last-child) {
-    margin: 0 0 8px 0;
+    margin: 0 0 16px 0;
 }
 
 #accordion img {
