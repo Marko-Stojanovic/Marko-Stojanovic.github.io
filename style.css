@@ -25,6 +25,10 @@
     --shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), 1px 1px 16px rgba(0, 0, 0, 0.2);
 }
 
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
 
 * {
     margin: 0;
@@ -33,9 +37,9 @@
 
 nav {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
@@ -77,4 +81,33 @@ nav ul li a {
     font-size: 32px;
     font-weight: 600;
     text-decoration: none;
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    height: 100vh;
+}
+
+h2 {
+    animation-name: spin;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+#img_space {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/images/space_travel.gif);
+    z-index: -1;
 }
