@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;400;600;800&display=swap');
+
+:root {
+    --color-red-light: rgb(231, 77, 60); /* #E74D3C */
+    --color-red-dark: rgb(192, 57, 43); /* #C0392B */
+    --color-orange-light: rgb(230, 125, 34); /* #E67D22 */
+    --color-orange-dark: rgb(211, 84, 0); /* #D35400 */
+    --color-yellow-light: rgb(241, 196, 15); /* #F1C40F */
+    --color-yellow-dark: rgb(243, 156, 18); /* #F39C12 */
+    --color-green-light: rgb(46, 204, 112); /* #2ECC70 */
+    --color-green-dark: rgb(39, 174, 96); /* #27AE60 */
+    --color-turquoise-light: rgb(26, 188, 156); /* #1ABC9C */
+    --color-turquoise-dark: rgb(22, 160, 132); /* #16A084 */
+    --color-blue-light: rgb(52, 152, 219); /* #3498DB */
+    --color-blue-dark: rgb(41, 128, 185); /* #2980B9 */
+    --color-purple-light: rgb(156, 89, 182); /* #9C59B6 */
+    --color-purple-dark: rgb(142, 68, 173); /* #8E44AD */
+    --color-white-light: rgb(236, 240, 241); /* #ECF0F1 */
+    --color-white-dark: rgb(189, 195, 199); /* #BDC3C7 */
+    --color-gray-light: rgb(149, 165, 166); /* #95A5A6 */
+    --color-gray-dark: rgb(127, 140, 141); /* #7D8C8D */
+    --color-black-light: rgb(52, 73, 94); /* #34495E */
+    --color-black-dark: rgb(44, 62, 80); /* #2c3e50 */
+
+    --shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), 1px 1px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    font-family: 'Oxanium', cursive;
+    background-color: var(--color-black-dark);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    position: relative;
+    text-align: center;
+    margin: 16px 0;
+}
+
+nav ul li:after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 12.5%;
+    height: 3px;
+    width: 75%;
+    background-color: var(--color-white-dark);
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+
+nav ul li:hover:after {
+    bottom: -2px;
+    opacity: 1;
+}
+
+nav ul li a {
+    color: var(--color-white-light);
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+}
