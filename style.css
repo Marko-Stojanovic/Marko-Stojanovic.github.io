@@ -25,14 +25,15 @@
     --shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), 1px 1px 16px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes spin {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
+@keyframes fly-in {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
 }
 
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Oxanium', cursive;
 }
 
 nav {
@@ -45,7 +46,6 @@ nav {
     left: 0;
     bottom: 0;
     width: 200px;
-    font-family: 'Oxanium', cursive;
     background-color: var(--color-black-dark);
 }
 
@@ -90,24 +90,29 @@ main {
     align-items: center;
     margin-left: 200px;
     height: 100vh;
+    overflow: hidden;
 }
 
 h2 {
-    animation-name: spin;
-    animation-duration: 0.3s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
+    margin: 0 64px;
+    color: var(--color-white-light);
+    font-size: 64px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 0 16px var(--color-black-dark), 0 0 16px var(--color-black-dark);
+    animation-name: fly-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
 #img_space {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 110%;
+    width: 110%;
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(/images/space_travel.gif);
+    filter: blur(2vh);
     z-index: -1;
 }
