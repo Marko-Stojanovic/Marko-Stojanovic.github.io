@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;400;600;800&family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
     --color-red-light: rgb(231, 77, 60); /* #E74D3C */
@@ -115,4 +116,33 @@ h2 {
     background-image: url(/images/space_travel.gif);
     filter: blur(2vh);
     z-index: -1;
+}
+
+#card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 0 64px;
+}
+
+#card {
+    padding: 32px;
+    width: 500px;
+    background-color: var(--color-black-dark);
+    box-sizing: border-box;
+}
+
+#card img {
+    margin: -32px 0 32px -32px;
+}
+
+#card h3 {
+    color: var(--color-white-dark);
+}
+
+#card p {
+    color: var(--color-white-light);
+    font-family: 'Roboto', sans-serif;
 }
