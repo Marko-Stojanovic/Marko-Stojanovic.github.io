@@ -273,5 +273,6 @@ h4 {
 
     #home_container, #card_container {
         margin: 0;
+        padding: 16px;
     }
 }
