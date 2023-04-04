@@ -265,3 +265,13 @@ h4 {
 ██║  ██║██████╔╝╚██████╔╝╚██████╔╝   ██║   
 ╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝    ╚═╝   
 */
+
+@media screen and (max-width: 828px) {
+    nav {
+        display: none;
+    }
+
+    #home_container, #card_container {
+        margin: 0;
+    }
+}
