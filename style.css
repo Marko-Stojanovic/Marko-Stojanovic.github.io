@@ -45,6 +45,10 @@
     font-family: 'Oxanium', cursive;
 }
 
+body {
+    background-color: var(--color-black-dark);
+}
+
 button {
     padding: 8px 24px;
     background: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-black-light) 100%);
@@ -143,7 +147,7 @@ main {
     z-index: -1;
 }
 
-#home_container, #card_container {
+#home_container, #event_container, #about_container {
     display: flex;
     justify-content: center;
     margin: 0 0 0 200px;
@@ -200,7 +204,7 @@ h4 {
 ╚══════╝  ╚═══╝  ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
 */
 
-#card_container {
+#event_container {
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 32px;
@@ -235,13 +239,13 @@ h4 {
     font-family: 'Roboto', sans-serif;
 }
 
-#card p#location, #card p#calendar {
+#card p#location, #card p#calendar, #card p#mail {
     margin: 16px 0 0 0;
     color: var(--color-white-dark);
     font-weight: 700;
 }
 
-#card p#location:before, #card p#calendar:before {
+#card p#location:before, #card p#calendar:before, #card p#mail:before {
     content: "";
     display: inline-block;
     margin: 0 8px -6px 0;
@@ -266,8 +270,56 @@ h4 {
 ╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝    ╚═╝   
 */
 
-h3 {
+#about_container {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 32px;
+}
 
+h1 {
+    margin: 32px 0 0 0;
+    color: var(--color-blue-light);
+    font-size: 48px;
+    font-weight: 400;
+    text-shadow: var(--shadow);
+    text-align: center;
+}
+
+h3 {
+    color: var(--color-white-dark);
+    font-size: 28px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: var(--shadow);
+}
+
+#card_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+#card p span {
+    display: inline-block;
+    transform: translate(0, 8px);
+    color: var(--color-blue-light);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+#card p span:first-child { margin-right: 4px; }
+#card p span:last-child { margin-left: 4px; }
+
+#card p#mail:before {
+    background-image: url(/images/icon_mail.png);
+}
+
+#about_container img {
+    align-self: center;
+    height: 128px;
+    border-radius: 16px;
 }
 
 /*
@@ -284,7 +336,7 @@ h3 {
         display: none;
     }
 
-    #home_container, #card_container {
+    #home_container, #event_container {
         margin: 0;
         padding: 16px;
     }
