@@ -336,7 +336,7 @@ h3 {
         display: none;
     }
 
-    #home_container, #event_container {
+    #home_container, #event_container, #about_container {
         margin: 0;
         padding: 16px;
     }
