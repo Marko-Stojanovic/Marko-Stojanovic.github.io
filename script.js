@@ -1,5 +1,13 @@
 $(document).ready(function() {
-    // Load nav and footer into each page
-    $('nav').load('/components/nav.html');
-    $('footer').load('/components/footer.html');
+    // Load nav into each page
+    $('nav#desktop').load('/components/nav.html');
+    $('nav#mobile').load('/components/nav_mobile.html', function() {
+        $("nav#mobile img#menu").click(function() {
+            $("nav#mobile ul").css("display", "flex");
+        });
+
+        $("nav#mobile ul").click(function() {
+            $("nav#mobile ul").css("display", "none");
+        });
+    });
 });

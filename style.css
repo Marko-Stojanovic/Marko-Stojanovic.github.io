@@ -67,7 +67,7 @@ button:hover {
     opacity: 0.75;
 }
 
-nav {
+nav#desktop {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,27 +81,27 @@ nav {
     transition: 0.2s ease-in-out;
 }
 
-nav:hover {
+nav#desktop:hover {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-nav > img {
+nav#desktop > img {
     position: absolute;
     top: 32px;
     width: 128px;
 }
 
-nav ul {
+nav#desktop ul, nav#mobile ul {
     list-style-type: none;
 }
 
-nav ul li {
+nav#desktop ul li, nav#mobile ul li {
     position: relative;
     text-align: center;
     margin: 16px 0;
 }
 
-nav ul li:after {
+nav#desktop ul li:after {
     content: "";
     position: absolute;
     bottom: -16px;
@@ -113,17 +113,54 @@ nav ul li:after {
     transition: 0.2s ease-in-out;
 }
 
-nav ul li:hover:after {
+nav#desktop ul li:hover:after {
     bottom: -2px;
     opacity: 1;
 }
 
-nav ul li a {
+nav#desktop ul li a, nav#mobile ul li a {
     color: var(--color-white-light);
     font-size: 32px;
     font-weight: 600;
     text-decoration: none;
     text-shadow: var(--shadow);
+}
+
+nav#mobile {
+    display: none;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 999;
+    transition: 0.2s ease-in-out;
+}
+
+nav#mobile img#logo {
+    position: absolute;
+    height: 64px;
+    left: 16px;
+}
+
+nav#mobile img#menu {
+    position: absolute;
+    height: 48px;
+    right: 32px;
+}
+
+nav#mobile ul {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 main {
@@ -332,12 +369,16 @@ h3 {
 */
 
 @media screen and (max-width: 828px) {
-    nav {
+    nav#desktop {
         display: none;
+    }
+    
+    nav#mobile {
+        display: flex;
     }
 
     #home_container, #event_container, #about_container {
-        margin: 0;
+        margin: 100px 0 0 0;
         padding: 16px;
     }
 
